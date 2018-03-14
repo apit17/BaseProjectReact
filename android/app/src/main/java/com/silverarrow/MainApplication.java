@@ -1,4 +1,4 @@
-package com.baseprojectreact;
+package com.silverarrow;
 
 import android.app.Application;
 

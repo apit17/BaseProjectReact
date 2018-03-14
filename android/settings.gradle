@@ -1,3 +1,3 @@
-rootProject.name = 'BaseProjectReact'
+rootProject.name = 'SilverArrow'
 
 include ':app'

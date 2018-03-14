@@ -11,7 +11,8 @@ import {
     Text,
     Alert,
     View,
-    Button
+    Button,
+    Image
 } from 'react-native';
 import CustomButton from '../Components/CustomButton'
 import CustomTextInput from '../Components/CustomTextInput'
@@ -20,15 +21,28 @@ export default class App extends Component {
         super(props);
         this.state = { username: '', password: '' };
     }
+    static navigationOptions = {header: null}
     render() {
         return (
             <View style={{
                 flex: 1,
                 justifyContent: 'center',
                 flexDirection: 'column',
-                marginLeft: 16,
-                marginRight: 16
+                // marginLeft: 16,
+                // marginRight: 16
             }}>
+                <View style={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginBottom: 64
+                }}>
+                    <Image source={require('../image/logo-silver-arrow.png')}
+                        style={{
+                            width: 330,
+                            height: 76
+                        }}
+                    />
+                </View>
                 <View style={{
                     marginBottom: 8
                 }}>
@@ -46,11 +60,6 @@ export default class App extends Component {
                     <CustomButton title='LOGIN' onPress={() => {
                         this.props.navigation.navigate('Home')
                     }} />
-                </View>
-                <View>
-                    <Button
-                        title='Daftar disini'
-                        onPress={() => { Alert.alert('register tapped') }} />
                 </View>
             </View>
         );
