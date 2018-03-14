@@ -11,7 +11,9 @@ import {
     Text,
     Alert,
     View,
-    Button
+    Button,
+    YellowBox,
+    DrawerSlideEvent,
 } from 'react-native';
 import CustomButton from '../Components/CustomButton'
 import CustomTextInput from '../Components/CustomTextInput'
@@ -19,7 +21,12 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = { username: '', password: '' };
+        YellowBox.ignoreWarnings([
+            'Warning: componentWillMount is deprecated',
+            'Warning: componentWillReceiveProps is deprecated',
+        ]);
     }
+    static navigationOptions = { header: null }
     render() {
         return (
             <View style={{

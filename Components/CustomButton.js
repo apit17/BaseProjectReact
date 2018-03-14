@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import {
     View,
     Text,
-    TouchableOpacity
+    TouchableOpacity,
+    StyleSheet
 } from 'react-native'
 
 export default class Button extends Component {
@@ -14,17 +15,8 @@ export default class Button extends Component {
             <TouchableOpacity
                 onPress={
                     () => { this.props.onPress() }}
-                style={{
-                    backgroundColor: 'steelblue',
-                    padding: 5,
-                    margin: 10,
-                    height: 45,
-                    borderRadius: 5,
-                    shadowRadius: 1.5,
-                    shadowColor: 'gray',
-                    shadowOpacity: 1,
-                    shadowOffset: {width:2.5, height: 2.5}
-                }}>
+                style={styles.steelblue}
+            >
                 <Text
                     style={{
                         textAlign: 'center',
@@ -40,3 +32,16 @@ export default class Button extends Component {
         )
     }
 }
+const styles = StyleSheet.create({
+    steelblue: {
+        backgroundColor: 'steelblue',
+        padding: 5,
+        margin: 10,
+        height: 45,
+        borderRadius: 5,
+        shadowRadius: 1.5,
+        shadowColor: 'gray',
+        shadowOpacity: 1,
+        shadowOffset: { width: 2.5, height: 2.5 }
+    }
+})

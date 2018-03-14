@@ -18,7 +18,7 @@ export default class CustomTextInput extends Component {
                     borderBottomWidth:1.5,
                     marginLeft: 16,
                     marginRight: 16,
-                    marginBottom: 8,
+                    marginBottom: 16,
                     padding: 5,
                     fontSize: 14
                 }}
